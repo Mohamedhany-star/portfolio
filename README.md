@@ -1,6 +1,6 @@
-# Mohamed Hany — Professional Portfolio
+﻿# Mohamed Hany — Professional Portfolio
 
-[![Live Site](https://img.shields.io/badge/Live%20Site-Visit%20Now-38bdf8?style=for-the-badge&logo=githubpages&logoColor=white)](https://mohamedhany-star.github.io/portfolio/)
+[![Live Site](https://img.shields.io/badge/Live%20Site-Visit%20Now-38bdf8?style=for-the-badge&logo=githubpages&logoColor=white)](https://mohamed-hany-abdelfattah.github.io/portfolio/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -44,10 +44,10 @@ The portfolio links to four real repositories, each in its own project card:
 
 | Project | Repository | Stack |
 |---------|-----------|-------|
-| E-Commerce Sales Analytics | [E-Commerce-Sales-Analytics](https://github.com/Mohamedhany-star/E-Commerce-Sales-Analytics) | Excel, SUMIFS/COUNTIFS, INDEX/MATCH |
-| Retail Sales Performance Dashboard 2025 | [Retail-Sales-Performance-Dashboard](https://github.com/Mohamedhany-star/Retail-Sales-Performance-Dashboard) | Excel, SUMIF/SUMPRODUCT, KPI Dashboards |
-| Online Competition & Voting Platform Database | [Competition-Voting-Platform-DB](https://github.com/Mohamedhany-star/Competition-Voting-Platform-DB) | SQL Server, T-SQL, ERD |
-| AWS Cloud Computing Project | [aws-cloud-computing-project](https://github.com/Mohamedhany-star/aws-cloud-computing-project) | AWS: IAM, VPC, EC2, S3, RDS, ALB, Auto Scaling |
+| E-Commerce Sales Analytics | [E-Commerce-Sales-Analytics](https://github.com/Mohamed-Hany-Abdelfattah/E-Commerce-Sales-Analytics) | Excel, SUMIFS/COUNTIFS, INDEX/MATCH |
+| Retail Sales Performance Dashboard 2025 | [Retail-Sales-Performance-Dashboard](https://github.com/Mohamed-Hany-Abdelfattah/Retail-Sales-Performance-Dashboard) | Excel, SUMIF/SUMPRODUCT, KPI Dashboards |
+| Online Competition & Voting Platform Database | [Competition-Voting-Platform-DB](https://github.com/Mohamed-Hany-Abdelfattah/Competition-Voting-Platform-DB) | SQL Server, T-SQL, ERD |
+| AWS Cloud Computing Project | [aws-cloud-computing-project](https://github.com/Mohamed-Hany-Abdelfattah/aws-cloud-computing-project) | AWS: IAM, VPC, EC2, S3, RDS, ALB, Auto Scaling |
 
 ## 🚀 Running Locally
 
@@ -64,8 +64,8 @@ Then visit `http://localhost:5500`.
 
 | | |
 |---|---|
-| **Live site** | https://mohamedhany-star.github.io/portfolio/ |
-| **GitHub** | https://github.com/Mohamedhany-star |
+| **Live site** | https://mohamed-hany-abdelfattah.github.io/portfolio/ |
+| **GitHub** | https://github.com/Mohamed-Hany-Abdelfattah |
 | **LinkedIn** | https://www.linkedin.com/in/mohamed-hany-abdelfattah |
 
 ## 📧 Contact Form
