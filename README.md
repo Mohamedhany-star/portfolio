@@ -38,6 +38,17 @@ portfolio/
 └── README.md
 ```
 
+## 📦 Featured Repositories
+
+The portfolio links to four real repositories, each in its own project card:
+
+| Project | Repository | Stack |
+|---------|-----------|-------|
+| E-Commerce Sales Analytics | [E-Commerce-Sales-Analytics](https://github.com/Mohamedhany-star/E-Commerce-Sales-Analytics) | Excel, SUMIFS/COUNTIFS, INDEX/MATCH |
+| Retail Sales Performance Dashboard 2025 | [Retail-Sales-Performance-Dashboard](https://github.com/Mohamedhany-star/Retail-Sales-Performance-Dashboard) | Excel, SUMIF/SUMPRODUCT, KPI Dashboards |
+| Online Competition & Voting Platform Database | [Competition-Voting-Platform-DB](https://github.com/Mohamedhany-star/Competition-Voting-Platform-DB) | SQL Server, T-SQL, ERD |
+| AWS Cloud Computing Project | [aws-cloud-computing-project](https://github.com/Mohamedhany-star/aws-cloud-computing-project) | AWS: IAM, VPC, EC2, S3, RDS, ALB, Auto Scaling |
+
 ## 🚀 Running Locally
 
 No build step required — open the files directly or serve the folder:
