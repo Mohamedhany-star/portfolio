@@ -1,0 +1,22 @@
+# System & Editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+*.suo
+*.user
+
+# Node / Bundler artifacts (kept if the project ever grows a build step)
+node_modules/
+dist/
+build/
+*.log
+
+# Local env / secrets
+.env
+.env.local
+*.secret
+
+# OS-generated image duplicates
+img/*-1.jpg

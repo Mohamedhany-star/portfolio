@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
+  <title>Page Not Found | Mohamed Hany</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0f1d;
+      --text: #f8fafc;
+      --muted: #64748b;
+      --accent-a: #38bdf8;
+      --accent-b: #3b82f6;
+      --accent-c: #1d4ed8;
+      --grad: linear-gradient(135deg, #38bdf8 0%, #3b82f6 50%, #1d4ed8 100%);
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      top: -180px;
+      left: -180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(56,189,248,0.35) 0%, transparent 70%);
+      filter: blur(80px);
+      z-index: 0;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      width: 550px;
+      height: 550px;
+      bottom: -180px;
+      right: -180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(147,51,234,0.25) 0%, transparent 70%);
+      filter: blur(80px);
+      z-index: 0;
+    }
+    .wrap {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      max-width: 520px;
+    }
+    .code {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(5rem, 18vw, 9rem);
+      font-weight: 800;
+      line-height: 1;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: block;
+    }
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 1.2rem 0 0.6rem;
+    }
+    p {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.9rem;
+      border-radius: 9999px;
+      background: var(--grad);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      font-family: 'Poppins', sans-serif;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37,99,235,0.4);
+      transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37,99,235,0.55);
+    }
+    .home { margin-top: 1rem; display: inline-block; color: var(--accent-a); font-size: 0.9rem; text-decoration: none; font-weight: 600; }
+    .home:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <span class="code">404</span>
+    <h1>Oops! This page went missing in the data.</h1>
+    <p>The page you're looking for doesn't exist or may have been moved. Let's get you back to the insights.</p>
+    <a href="./" class="btn">Return to Homepage</a>
+    <br>
+    <a href="./" class="home">Go back to portfolio</a>
+  </div>
+</body>
+</html>
