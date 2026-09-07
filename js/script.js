@@ -217,6 +217,155 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --------------------------------------------------------------------------
+  // 6.1 HERO TYPEWRITER EFFECT (ROTATING ROLES)
+  // --------------------------------------------------------------------------
+  const typedRoleEl = document.getElementById('typedRole');
+
+  if (typedRoleEl) {
+    const roles = [
+      'Data Analyst',
+      'Cloud Computing Enthusiast',
+      'SQL & Power BI Developer',
+      'AWS Cloud Foundations',
+    ];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeTick() {
+      const currentRole = roles[roleIndex];
+      if (!isDeleting) {
+        charIndex += 1;
+        typedRoleEl.textContent = currentRole.slice(0, charIndex);
+        if (charIndex === currentRole.length) {
+          isDeleting = true;
+          setTimeout(typeTick, 1800);
+          return;
+        }
+        setTimeout(typeTick, 70);
+      } else {
+        charIndex -= 1;
+        typedRoleEl.textContent = currentRole.slice(0, charIndex);
+        if (charIndex === 0) {
+          isDeleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+          setTimeout(typeTick, 350);
+          return;
+        }
+        setTimeout(typeTick, 38);
+      }
+    }
+
+    typeTick();
+  }
+
+  // --------------------------------------------------------------------------
+  // 6.2 ANIMATED STAT COUNTERS (FIRST IMPRESSION NUMBERS)
+  // --------------------------------------------------------------------------
+  const statNumbers = document.querySelectorAll('.stat-num');
+
+  function animateCountUp(el) {
+    const target = parseInt(el.dataset.target, 10) || 0;
+    const duration = 1400;
+    const startTime = performance.now();
+
+    function tick(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(target * eased);
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      } else {
+        el.textContent = target;
+      }
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  if ('IntersectionObserver' in window) {
+    const countersObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCountUp(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+    statNumbers.forEach((el) => countersObserver.observe(el));
+  } else {
+    statNumbers.forEach((el) => {
+      el.textContent = el.dataset.target || '0';
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 6.3 ANIMATED SKILL BARS (PROFICIENCY BREAKDOWN)
+  // --------------------------------------------------------------------------
+  const skillBarFills = document.querySelectorAll('.bar-fill');
+
+  if ('IntersectionObserver' in window) {
+    const barsObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.width = entry.target.dataset.width || '0%';
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.35 }
+    );
+    skillBarFills.forEach((el) => barsObserver.observe(el));
+  } else {
+    skillBarFills.forEach((el) => {
+      el.style.width = el.dataset.width || '0%';
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // Bar percentage values count up next to each bar
+  // --------------------------------------------------------------------------
+  const barValues = document.querySelectorAll('.bar-value');
+
+  if ('IntersectionObserver' in window) {
+    const barValueObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.dataset.value, 10) || 0;
+            const duration = 1200;
+            const startTime = performance.now();
+
+            function tickValue(now) {
+              const progress = Math.min((now - startTime) / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              el.textContent = `${Math.round(target * eased)}%`;
+              if (progress < 1) {
+                requestAnimationFrame(tickValue);
+              } else {
+                el.textContent = `${target}%`;
+              }
+            }
+            requestAnimationFrame(tickValue);
+            observer.unobserve(el);
+          }
+        });
+      },
+      { threshold: 0.35 }
+    );
+    barValues.forEach((el) => barValueObserver.observe(el));
+  } else {
+    barValues.forEach((el) => {
+      el.textContent = `${el.dataset.value || 0}%`;
+    });
+  }
+
+  // --------------------------------------------------------------------------
   // 7. CLIENT-SIDE CONTACT FORM VALIDATION & HANDLING
   // --------------------------------------------------------------------------
   const contactForm = document.getElementById('contactForm');
