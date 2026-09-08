@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typedRoleEl) {
     const roles = [
       'Data Analyst',
-      'Cloud Computing Enthusiast',
+      'Cloud Computing',
       'SQL & Power BI Developer',
       'AWS Cloud Foundations',
     ];
