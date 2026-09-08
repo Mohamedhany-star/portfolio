@@ -32,12 +32,8 @@ portfolio/
 ├── js/
 │   └── script.js       # Theme, nav, scroll, form logic
 ├── img/
-│   ├── favicon.svg              # Custom "MH" gradient favicon
-│   ├── profile.jpg              # Portrait photo
-│   ├── project-erd.png          # Competition DB entity-relationship diagram
-│   ├── project-ecommerce.png    # E-Commerce dashboard screenshot
-│   ├── project-retail.png       # Retail dashboard screenshot
-│   └── project-aws.svg          # AWS architecture diagram
+│   ├── favicon.svg     # Custom "MH" gradient favicon
+│   └── profile.jpg     # Portrait photo
 ├── LICENSE
 └── README.md
 ```
