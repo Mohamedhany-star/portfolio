@@ -1673,6 +1673,17 @@ ul {
   line-height: 1.35;
 }
 
+.cert-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cert-title a:hover {
+  color: var(--accent-primary);
+  text-decoration: underline;
+}
+
 .cert-issuer {
   font-size: 0.85rem;
   font-weight: 600;
