@@ -502,4 +502,71 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 6000);
     });
   }
+
+  // --------------------------------------------------------------------------
+  // 8. CERTIFICATE PREVIEW MODAL
+  // --------------------------------------------------------------------------
+  const certModal = document.getElementById('certModal');
+  const certVerifyLinks = document.querySelectorAll('.cert-verify-link');
+  const certFallbackSvg =
+    '<svg class="cert-modal-fallback" xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<circle cx="12" cy="8" r="6"></circle>' +
+    '<path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>' +
+    '</svg>';
+
+  function openCertModal(trigger) {
+    if (!certModal) return;
+
+    const modalTitle = document.getElementById('certModalTitle');
+    const modalIssuer = document.getElementById('certModalIssuer');
+    const modalVerify = document.getElementById('certModalVerify');
+    const modalFigure = document.getElementById('certModalFigure');
+
+    if (!modalTitle || !modalIssuer || !modalVerify || !modalFigure) return;
+
+    modalTitle.textContent = trigger.textContent.trim();
+    modalIssuer.textContent = (trigger.closest('.cert-card').querySelector('.cert-issuer').textContent || '').trim();
+    modalVerify.href = trigger.getAttribute('href') || '#';
+
+    modalFigure.innerHTML = certFallbackSvg;
+
+    const imgSrc = trigger.getAttribute('data-cert-img');
+    if (imgSrc) {
+      const img = new Image();
+      img.alt = trigger.textContent.trim();
+      img.addEventListener('load', () => {
+        modalFigure.innerHTML = '';
+        modalFigure.appendChild(img);
+      });
+      img.src = imgSrc;
+    }
+
+    certModal.classList.add('open');
+    certModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCertModal() {
+    if (!certModal) return;
+    certModal.classList.remove('open');
+    certModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  certVerifyLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      openCertModal(link);
+    });
+  });
+
+  document.querySelectorAll('[data-cert-modal-close]').forEach((el) => {
+    el.addEventListener('click', closeCertModal);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && certModal && certModal.classList.contains('open')) {
+      closeCertModal();
+    }
+  });
 });

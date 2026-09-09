@@ -553,7 +553,7 @@
                 <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
               </svg>
             </div>
-            <h3 class="cert-title"><a href="https://www.credly.com/badges/ca221c21-5acd-48e1-8d85-abfe03274d16/public_url" target="_blank" rel="noopener">AWS Academy Cloud Foundations</a></h3>
+            <h3 class="cert-title"><a class="cert-verify-link" data-cert-img="https://images.credly.com/images/e3541a0c-dd4a-4820-8052-5001006efc85/linkedin_thumb_blob" href="https://www.credly.com/badges/ca221c21-5acd-48e1-8d85-abfe03274d16/public_url" target="_blank" rel="noopener">AWS Academy Cloud Foundations</a></h3>
             <p class="cert-issuer">AWS Academy Graduate</p>
             <p class="cert-desc">Comprehensive cloud training covering AWS core services, security, architecture, pricing, and cloud computing fundamentals.</p>
             <div class="cert-skills">
@@ -580,7 +580,7 @@
                 <line x1="1" y1="14" x2="4" y2="14"></line>
               </svg>
             </div>
-            <h3 class="cert-title"><a href="https://www.credly.com/badges/30a75f01-e494-46b5-ba56-58d1b75e90d6/public_url" target="_blank" rel="noopener">AWS Educate — Introduction to Generative AI</a></h3>
+            <h3 class="cert-title"><a class="cert-verify-link" data-cert-img="https://images.credly.com/images/e50c657a-edd9-4c93-b1cf-2b6634b54abf/linkedin_thumb_blob" href="https://www.credly.com/badges/30a75f01-e494-46b5-ba56-58d1b75e90d6/public_url" target="_blank" rel="noopener">AWS Educate — Introduction to Generative AI</a></h3>
             <p class="cert-issuer">AWS Educate Training Badge</p>
             <p class="cert-desc">Introductory AWS Educate training on generative AI fundamentals — large language models, foundations, applications, and responsible AI concepts.</p>
             <div class="cert-skills">
@@ -601,7 +601,7 @@
                 <line x1="10" y1="16" x2="10.01" y2="16"></line>
               </svg>
             </div>
-            <h3 class="cert-title"><a href="https://www.credly.com/badges/5e132e6e-57af-4b50-af6f-afaa0a11fc3b/public_url" target="_blank" rel="noopener">AWS Educate — Getting Started with Storage</a></h3>
+            <h3 class="cert-title"><a class="cert-verify-link" data-cert-img="https://images.credly.com/images/3b1b42e6-dfc2-492b-90df-8058096cb93d/linkedin_thumb_blob" href="https://www.credly.com/badges/5e132e6e-57af-4b50-af6f-afaa0a11fc3b/public_url" target="_blank" rel="noopener">AWS Educate — Getting Started with Storage</a></h3>
             <p class="cert-issuer">AWS Educate Training Badge</p>
             <p class="cert-desc">Introductory storage concepts covering object, block, and file storage services on AWS, along with when and how to use each type.</p>
             <div class="cert-skills">
@@ -621,7 +621,7 @@
                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
               </svg>
             </div>
-            <h3 class="cert-title"><a href="https://www.credly.com/badges/7e3a2861-cdd2-4e46-93ca-914c028de33a/public_url" target="_blank" rel="noopener">Cisco Networking Basics</a></h3>
+            <h3 class="cert-title"><a class="cert-verify-link" data-cert-img="https://images.credly.com/images/5bdd6a39-3e03-4444-9510-ecff80c9ce79/linkedin_thumb_image.png" href="https://www.credly.com/badges/7e3a2861-cdd2-4e46-93ca-914c028de33a/public_url" target="_blank" rel="noopener">Cisco Networking Basics</a></h3>
             <p class="cert-issuer">Cisco Networking Academy</p>
             <p class="cert-desc">Foundational principles of computer network protocols, IP addressing, LAN topologies, and data communication infrastructure.</p>
             <div class="cert-skills">
@@ -641,7 +641,7 @@
                 <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
               </svg>
             </div>
-            <h3 class="cert-title"><a href="https://maharatech.gov.eg/mod/customcert/verify_certificate.php?code=YpilucUai3" target="_blank" rel="noopener">Implementing & Developing SQL Server Objects</a></h3>
+            <h3 class="cert-title"><a class="cert-verify-link" href="https://maharatech.gov.eg/mod/customcert/verify_certificate.php?code=YpilucUai3" target="_blank" rel="noopener">Implementing & Developing SQL Server Objects</a></h3>
             <p class="cert-issuer">Mahara-Tech / Information Technology Institute (ITI)</p>
             <p class="cert-desc">Developing relational database objects, tables, views, stored procedures, constraints, and query optimization techniques in SQL Server.</p>
             <div class="cert-skills">
@@ -1285,6 +1285,20 @@
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>
+
+  <!-- Certificate Preview Modal -->
+  <div class="cert-modal" id="certModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
+    <div class="cert-modal-overlay" data-cert-modal-close></div>
+    <div class="cert-modal-content" role="document">
+      <button class="cert-modal-close" type="button" aria-label="Close certificate preview" data-cert-modal-close>&times;</button>
+      <div class="cert-modal-body">
+        <div class="cert-modal-figure" id="certModalFigure"></div>
+        <h3 class="cert-modal-title" id="certModalTitle"></h3>
+        <p class="cert-modal-issuer" id="certModalIssuer"></p>
+        <a class="cert-modal-verify" id="certModalVerify" href="#" target="_blank" rel="noopener">Verify Credential</a>
+      </div>
+    </div>
+  </div>
 
   <!-- Core JavaScript -->
   <script src="js/script.js" defer></script>
