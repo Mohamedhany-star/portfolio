@@ -1760,22 +1760,23 @@ ul {
 }
 
 .cert-modal-figure {
-  width: 220px;
-  height: 220px;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 4 / 3;
   margin: 0 auto 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   background: radial-gradient(circle at 50% 30%, rgba(65, 208, 255, 0.12), transparent 70%);
-  border: 1px dashed var(--border-glass);
-  border-radius: 1rem;
+  border: 1px solid var(--border-glass);
+  border-radius: 0.75rem;
 }
 
 .cert-modal-figure img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  border-radius: 0.5rem;
 }
 
 .cert-modal-fallback {
